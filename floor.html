@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Shopping</title>
+    <meta name="description" content="Shopping - A-Frame">
+    
+     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+      <script src="https://unpkg.com/aframe-text-geometry-component@0.5.1/dist/aframe-text-geometry-component.min.js"></script>
+  </head>
+  <body>
+
+  <a-scene>
+ <a-assets>
+  <!-- ... -->
+   <a-asset-item id="tail" src="models/man/man.dae"></a-asset-item>
+   <a-asset-item id="women" src="models/sinon/sinon-sword-art-online.dae"></a-asset-item>
+  <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+
+        <a-asset-item id="pockemon-obj" src="models/pockemon/pokemon-sun-and-moon-lillie.obj"></a-asset-item>
+        <a-asset-item id="pockemon-mtl" src="models/pockemon/pokemon-sun-and-moon-lillie.mtl"></a-asset-item>
+        <a-asset-item id="pic-obj" src="models/picachu/pikachu-pokemon-go.obj"></a-asset-item>
+        <a-asset-item id="pic-mtl" src="models/picachu/pikachu-pokemon-go.mtl"></a-asset-item>
+        <a-asset-item id="mar-obj" src="models/mario/mario-sculpture.obj"></a-asset-item>
+        <a-asset-item id="mar-mtl" src="models/mario/mario-sculpture.mtl"></a-asset-item>
+        <img id="pink" src="https://img.gs/bbdkhfbzkk/stretch/http://i.imgur.com/1hyyIUi.jpg" crossorigin="anonymous" />
+        <img src="https://img.gs/bbdkhfbzkk/stretch/https://i.imgur.com/25P1geh.png" id="grid" crossorigin="anonymous">
+        <img src="https://img.gs/bbdkhfbzkk/2048x1024,stretch/http://i.imgur.com/WMNH2OF.jpg" id="chrome" crossorigin="anonymous">
+        <img id="sky" src="https://img.gs/bbdkhfbzkk/2048x2048,stretch/http://i.imgur.com/WqlqEkq.jpg" crossorigin="anonymous" />
+        <a-asset-item id="dawningFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2FdawningOfANewDayRegular.typeface.json?1490305922844"></a-asset-item>
+        <a-asset-item id="exoFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2Fexo2Black.typeface.json?1490305922150"></a-asset-item>
+        <a-asset-item id="exoItalicFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2Fexo2BlackItalic.typeface.json?1490305922725"></a-asset-item>
+  
+  <!-- ... -->
+</a-assets>
+
+
+
+        
+     
+<!-- ... -->
+
+  <a-plane src="#groundTexture" rotation="-90 0 0" width="30" height="30"></a-plane>
+  <a-sky color="black"></a-sky>
+
+  <a-entity position="-3 1 -6" rotation="5 0 0">
+        <a-entity
+          rotation="0 0 5"
+          position="0 2 0.2"
+          text-geometry="value: Coming Soon; font: #dawningFont; bevelEnabled: true; bevelSize: 0.05; bevelThickness: 0.05; curveSegments: 12; size: 1; height: 0;"
+          material="color:lavenderblush; metalness:1; roughness: 0; sphericalEnvMap: #pink;"
+        ></a-entity>
+
+        <a-entity position="-0.5 0.5 -0.5" scale="0.6 1.2 1" text-geometry="value: TAARANGANA; font: #exoFont; bevelEnabled: true; bevelSize: 0.1; bevelThickness: 0.1; curveSegments: 1; size: 1.5; height: 0.5;" material="color:pink; metalness:0.9; roughness: 0.05; sphericalEnvMap: #chrome;"></a-entity>
+
+        <a-entity position="1 0 0.3" text-geometry="value: 2018; font: #exoItalicFont; style: italic; size: 0.8; weight: bold; height: 0;"
+                  material="shader: flat; color: white"></a-entity>
+        <a-entity position="1 0 0.3" text-geometry="value: 2018; font: #exoItalicFont; style: italic; size: 0.8; weight: bold; height: 0; bevelEnabled: true; bevelSize: 0.04; bevelThickness: 0.04; curveSegments: 1"
+                  material="shader: flat; color: white; transparent: true; opacity: 0.4"></a-entity>
+       </a-entity>
+       
+         <a-box src="images/ig.jpg" position="0 4.5 -5" rotation="0 45 45" scale="1 1 1">
+           <a-animation attribute="rotation" from="0 -30 0" to="0 330 0" dur="10000"
+                     easing="linear" repeat="indefinite"></a-animation>
+
+
+         </a-box>
+
+          <a-box src="images/shirley.jpg" position="-7 0 7" rotation="0 45 45" scale="3 6 3">
+           <a-animation attribute="rotation" from="0 -30 0" to="0 330 0" dur="10000"
+                     easing="linear" repeat="indefinite"></a-animation>
+
+
+         </a-box>
+          <a-box src="images/biswa.jpg" position="-8 0 3" rotation="0 45 45" scale="3 6 3">
+           <a-animation attribute="rotation" from="0 -30 0" to="0 330 0" dur="10000"
+                     easing="linear" repeat="indefinite"></a-animation>
+
+
+         </a-box>
+
+         </a-box>
+          <a-box src="images/zaeden.jpg" position="-8 0 -2" rotation="0 45 45" scale="3 6 3">
+           <a-animation attribute="rotation" from="0 -30 0" to="0 330 0" dur="10000"
+                     easing="linear" repeat="indefinite"></a-animation>
+
+
+         </a-box>
+
+  <a-entity id="model" position="5 0 -3">
+        <a-animation attribute="rotation" from="0 -30 0" to="0 330 0" dur="15000"
+                     easing="linear" repeat="indefinite"></a-animation>
+        <a-collada-model  rotation="0 -20 0" scale="1.5 1.5 1.5" src="#tail"></a-collada-model>
+      
+  </a-entity>
+
+
+<a-entity  position="7 0 -1">
+        <a-animation attribute="rotation" from="0 -30 0" to="0 330 0" dur="15000"
+                     easing="linear" repeat="indefinite"></a-animation>
+        <a-collada-model rotation="0 -20 0" scale="1.5 1.5 1.5"
+                         src="#women"></a-collada-model>
+                
+       
+      </a-entity>
+    
+  <a-entity  position="7 0 3"  scale="1.5 1.5 1.5" rotation="0 -20 0" obj-model="obj: #pockemon-obj; mtl: #pockemon-mtl">
+  <a-animation attribute="rotation" from="0 -30 0" to="0 330 0" dur="15000"
+                     easing="linear" repeat="indefinite"></a-animation>
+
+  </a-entity>
+  
+
+   <a-entity  position="5 0 6" scale="0.05 0.05 0.05" rotation="0 -20 0" obj-model="obj: #pic-obj; mtl: #pic-mtl" size="1">
+  <a-animation attribute="rotation" from="0 -30 0" to="0 330 0" dur="15000"
+                     easing="linear" repeat="indefinite"></a-animation>
+
+  </a-entity>
+
+   <a-entity  position="1 0 8" scale="0.05 0.05 0.05 " rotation="0 -20 0" obj-model="obj: #mar-obj; mtl: #mar-mtl" size="1">
+  <a-animation attribute="rotation" from="0 -30 0" to="0 330 0" dur="15000"
+                     easing="linear" repeat="indefinite"></a-animation>
+
+  </a-entity>
+
+  
+ 
+
+  -->
+
+  
+   <a-light type="directional" color="yellow" intensity="0.5" position="-1 2 1"></a-light>
+      <a-light type="ambient" color="#fff"></a-light>
+
+</a-scene>
+    
+  </body>
+</html>
